@@ -40,7 +40,36 @@ public class Printer {
 		}
 
 	}
+	
+	
+	private void printFile2() {
+		// TODO Auto-generated method stub
 
+	}
+	
+	//PdfBox
+//	private static void printFileWithPdfBox(FileInputStream psStream) {
+//		PrinterJob job = PrinterJob.getPrinterJob();
+//	    PageFormat pf = job.defaultPage();
+//	    Paper paper = new Paper();
+//	    paper.setSize(612.0, 832.0);
+//	    double margin = 10;
+//	    paper.setImageableArea(margin, margin, paper.getWidth() - margin, paper.getHeight() - margin);
+//	    pf.setPaper(paper);
+//	    pf.setOrientation(PageFormat.LANDSCAPE);
+//
+//	    // PDFBox
+//	    PDDocument document = PDDocument.load("yourfile.pdf");
+//	    job.setPageable(new PDPageable(document, job));
+//
+//	    job.setJobName("funciona?");
+//	    try {
+//	        job.print();
+//	    } catch (PrinterException e) {
+//	        System.out.println(e);
+//	    }
+//	}
+	
 	private static void printFile(FileInputStream psStream) {
 		DocFlavor psInFormat = DocFlavor.INPUT_STREAM.AUTOSENSE;
 		Doc myDoc = new SimpleDoc(psStream, psInFormat, null);
